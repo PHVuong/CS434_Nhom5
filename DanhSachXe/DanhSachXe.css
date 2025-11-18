@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.motorbike-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.motorbike-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.motorbike-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.motorbike-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.motorbike-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.motorbike-info {
+    padding: 16px;
+    flex-grow: 1;
+}
+
+.motorbike-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.motorbike-detail {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.motorbike-detail strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.motorbike-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e74c3c;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.motorbike-actions {
+    padding: 0 16px 16px 16px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-detail,
+.btn-book {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-detail {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.btn-detail:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.btn-book {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.btn-book:hover {
+    background-color: #229954;
+    transform: translateY(-1px);
+}
+
+.btn-detail:active,
+.btn-book:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .motorbike-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .motorbike-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .motorbike-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 20px;
+    }
+
+    .motorbike-info {
+        padding: 12px;
+    }
+
+    .motorbike-name {
+        font-size: 16px;
+    }
+
+    .motorbike-detail,
+    .motorbike-price {
+        font-size: 13px;
+    }
+
+    .motorbike-actions {
+        padding: 0 12px 12px 12px;
+        flex-direction: column;
+    }
+
+    .btn-detail,
+    .btn-book {
+        width: 100%;
+    }
+}
+
