@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Khung form */
+.login-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 400px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease;
+}
+
+/* Animation fade-in*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tiêu đề thương hiệu */
+.brand {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.brand h1 {
+  font-size: 36px;
+  color: #0984e3;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.brand h1 span {
+  color: #6c5ce7;
+}
+
+.brand p {
+  font-size: 14px;
+  color: #636e72;
+  margin-top: 5px;
+}
+
+/* Tiêu đề đăng nhập */
+.login-box h2 {
+  text-align: center;
+  color: #2d3436;
+  margin-bottom: 20px;
+}
+
+/* Label */
+label {
+  font-size: 14px;
+  color: #2d3436;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Ô input */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #0984e3;
+  outline: none;
+}
+
+/* Hàng chứa checkbox + quên mật khẩu */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+/* FIX CHECKBOX */
+.remember-forgot label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.remember-forgot input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #0984e3; 
+  cursor: pointer;
+  margin: 0; 
+}
+
+/* Link quên mật khẩu */
+.remember-forgot a {
+  color: #0984e3;
+  text-decoration: none;
+}
+
+/* Nút đăng nhập */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0984e3, #6c5ce7);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  transform: translateY(-2px);
+}
+
+/* Link đăng ký */
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #6c5ce7;
+  font-weight: 600;
+  text-decoration: none;
+}

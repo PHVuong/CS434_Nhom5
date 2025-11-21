@@ -1,0 +1,35 @@
+@model SmartMotoRental.Models.Motorbike
+@{
+    ViewData["Title"] = "Chi tiết xe máy";
+}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="@Model.ImageUrl" class="img-fluid rounded" alt="@Model.Name">
+        </div>
+        <div class="col-md-6">
+            <h1>@Model.Name</h1>
+            <hr>
+            <p><strong>Loại xe:</strong> @Model.Type</p>
+            <p><strong>Hãng:</strong> @Model.Brand</p>
+            <p><strong>Năm sản xuất:</strong> @Model.Year</p>
+            <p><strong>Biển số:</strong> @Model.PlateNumber</p>
+            <p><strong>Tình trạng:</strong> @Model.Condition</p>
+            <p><strong>Vị trí:</strong> @Model.Location</p>
+            <hr>
+            <h3>Giá thuê</h3>
+            @if (Model.PricePerHour.HasValue)
+            {
+                <p><strong>Theo giờ:</strong> @Model.PricePerHour.Value.ToString("N0") VNĐ</p>
+            }
+            @if (Model.PricePerDay.HasValue)
+            {
+                <p><strong>Theo ngày:</strong> @Model.PricePerDay.Value.ToString("N0") VNĐ</p>
+            }
+            <hr>
+            <h4>Mô tả</h4>
+            <p>@Model.Description</p>
+            <a href="@Url.Action("Index", "Motorbike")" class="btn btn-secondary">Quay lại danh sách</a>
+        </div>
+    </div>
+</div>

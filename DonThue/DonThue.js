@@ -1,8 +1,6 @@
 const searchInput = document.getElementById("searchInput");
 const statusFilter = document.getElementById("statusFilter");
 const orderRows = document.querySelectorAll("#orderTable tr");
-const API = "http://localhost:3000/api/orders";
-
 
 function filterTable() {
     const searchText = searchInput.value.toLowerCase();
