@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cho Thuê Xe Máy Đà Nẵng DTU - Đăng nhập</title>
-
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
   <div class="login-container">
     <div class="brand">
-      <h1>Cho Thuê Xe Máy Đà Nẵng<span> Nhóm 5   </span></h1>
+      <h1>Cho Thuê Xe Máy Đà Nẵng <span>Nhóm 5</span></h1>
       <p>Thuê xe dễ dàng - Trải nghiệm tự do</p>
     </div>
 
     <div class="login-box">
       <h2>Đăng nhập tài khoản</h2>
-      <form>
+      <form onsubmit="return false;"> <!-- Ngăn submit reload trang -->
         <label for="username">Email / Số điện thoại</label>
         <input type="text" id="username" placeholder="Nhập email hoặc số điện thoại">
 
@@ -28,7 +27,7 @@
           <a href="#">Quên mật khẩu?</a>
         </div>
 
-        <button type="button" onclick="login()">Đăng nhập</button>
+        <button type="button" id="btnLogin">Đăng nhập</button>
 
         <p class="register-link">
           Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a>
@@ -37,17 +36,6 @@
     </div>
   </div>
 
-  <script>
-    function login() {
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
-
-      if (user === "" || pass === "") {
-        alert("Vui lòng nhập đầy đủ thông tin!");
-      } else {
-        alert("Đăng nhập thành công (demo)!");
-      }
-    }
-  </script>
+  <script src="login.js"></script>
 </body>
 </html>
